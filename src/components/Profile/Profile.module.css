@@ -1,0 +1,11 @@
+.profile{
+    width: 250px;
+}
+.avatar{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.description{
+    width: 100%;
+}
