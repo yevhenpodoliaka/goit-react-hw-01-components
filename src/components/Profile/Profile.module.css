@@ -1,11 +1,32 @@
-.profile{
-    width: 250px;
+.profile {
+  width: 250px;
+  border: 2px solid black;
+  border-radius: 4px;
 }
-.avatar{
-    display: block;
-    width: 100%;
-    height: auto;
+.avatar {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: orange;
 }
-.description{
-    width: 100%;
+.description {
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+
+  width: 100%;
+}
+.stats {
+  background-color: burlywood;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.stats li {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

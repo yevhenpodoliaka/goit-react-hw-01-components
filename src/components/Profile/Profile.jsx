@@ -1,28 +1,29 @@
 import PropTypes from 'prop-types';
 import s from './Profile.module.css';
+import defaultAvatar from './default-avatar.png';
 
-function Profile({ username, tag, location, avatar, stats }) {
+function Profile({ username, tag, location, avatar = defaultAvatar, stats }) {
   return (
     <div className={s.profile}>
       <div className={s.description}>
         <img src={avatar} alt={username} className={s.avatar} />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
+        <p>{username}</p>
+        <p>@{tag}</p>
+        <p>{location}</p>
       </div>
 
-      <ul className="stats">
+      <ul className={s.stats}>
         <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
+          <span>Followers</span>
+          <span>{stats.followers}</span>
         </li>
         <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.vievs}</span>
+          <span>Views</span>
+          <span>{stats.views}</span>
         </li>
         <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
+          <span>Likes</span>
+          <span>{stats.likes}</span>
         </li>
       </ul>
     </div>
@@ -30,13 +31,10 @@ function Profile({ username, tag, location, avatar, stats }) {
 }
 
 Profile.propTypes = {
-    username: PropTypes.string.isRequired,
-    tag:PropTypes.string.isRequired,
-    location:PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    stats :PropTypes.objectOf(PropTypes.number)
-  ,
-}
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
+};
 export default Profile;
-
-

@@ -5,16 +5,16 @@ export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
+        padding: 15,
+        height: '100%',
         display: 'flex',
-        flexDirection:'column',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
+        fontSize: 22,
         color: '#010101',
       }}
     >
-      React homework template
       <Profile
         username={user.username}
         tag={user.tag}
