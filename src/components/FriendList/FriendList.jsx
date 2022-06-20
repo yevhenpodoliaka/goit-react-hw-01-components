@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import s from './FriendList.modules.css';
+import s from './FriendList.module.css';
 import FriendsListItem from 'components/FriendListItem/FriendListItem';
 
 function FriendsList({ friends }) {
@@ -10,7 +10,7 @@ function FriendsList({ friends }) {
           key={friend.id}
           avatar={friend.avatar}
           name={friend.name}
-          isOnline
+          isOnline={friend.isOnline}
         />
       ))}
     </ul>

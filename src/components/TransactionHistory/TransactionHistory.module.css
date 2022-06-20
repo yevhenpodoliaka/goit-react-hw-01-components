@@ -1,0 +1,16 @@
+.table{
+   font-size: 18px;
+   background-color: whitesmoke;
+   width: 300px;
+}
+.table thead{
+   background-color: rgb(132, 121, 121);
+}
+.table tbody{
+   background-color: rgb(54, 50, 50);
+   color: white;
+}
+.table tr,
+.table th{
+   padding: 4px;
+} 
