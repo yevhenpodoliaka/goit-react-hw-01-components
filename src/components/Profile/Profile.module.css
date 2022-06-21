@@ -1,7 +1,7 @@
 .profile {
-  width: 250px;
   border: 2px solid black;
   border-radius: 4px;
+  margin-bottom: 15px;
 }
 .avatar {
   display: block;
@@ -12,7 +12,6 @@
 .description {
   display: flex;
   align-items: center;
-
   flex-direction: column;
 
   width: 100%;

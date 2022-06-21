@@ -12,7 +12,7 @@ function TransactionHistory({ transactions }) {
       </thead>
       <tbody>
         {transactions.map(transaction => (
-          <tr key={transaction.id}>
+          <tr key={transaction.id} style={{ color : transaction.type === 'deposit' ? 'green':'grey'}}>
             <td>{transaction.type}</td>
             <td>{transaction.amount}</td>
             <td>{transaction.currency}</td>
@@ -23,13 +23,6 @@ function TransactionHistory({ transactions }) {
   );
 }
 TransactionHistory.propTypes = {
-  transactions: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      type: PropTypes.string.isRequired,
-      amount: PropTypes.number.isRequired,
-      currency: PropTypes.string.isRequired,
-    })
-  ),
+  transactions: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
 };
 export default TransactionHistory;

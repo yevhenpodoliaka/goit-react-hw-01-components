@@ -11,6 +11,8 @@ export const App = () => {
   return (
     <div
       style={{
+         maxWidth:320,
+        margin:' 0  auto',
         padding: 15,
         height: '100%',
         display: 'flex',

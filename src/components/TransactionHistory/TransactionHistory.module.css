@@ -1,7 +1,7 @@
 .table{
    font-size: 18px;
    background-color: whitesmoke;
-   width: 300px;
+   width: 100%;
 }
 .table thead{
    background-color: rgb(132, 121, 121);

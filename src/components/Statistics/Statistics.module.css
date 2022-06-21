@@ -1,7 +1,8 @@
 .section{
-    width: 300px;
+    width: 100%;
     background-color: #fff;
     padding: 5px;
+    margin-bottom: 15px;
 }
 .title{
     text-align: center;
