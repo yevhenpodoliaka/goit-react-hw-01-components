@@ -11,11 +11,11 @@ function TransactionHistory({ transactions }) {
         </tr>
       </thead>
       <tbody>
-        {transactions.map(transaction => (
-          <tr key={transaction.id} style={{ color : transaction.type === 'deposit' ? 'green':'grey'}}>
-            <td>{transaction.type}</td>
-            <td>{transaction.amount}</td>
-            <td>{transaction.currency}</td>
+        {transactions.map(({id,type,amount,currency}) => (
+          <tr key={id} style={{ color : type === 'deposit' ? 'green':'grey'}}>
+            <td>{type}</td>
+            <td>{amount}</td>
+            <td>{currency}</td>
           </tr>
         ))}
       </tbody>
